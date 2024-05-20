@@ -3,7 +3,12 @@ package models
 
 import models.Token.TokenType
 
-case class Token(tokenType: TokenType, lexeme: String, literal: Any, line: Int)
+case class Token(
+    tokenType: TokenType,
+    lexeme: String,
+    literal: Option[Any],
+    line: Int
+)
 
 object Token:
 
